@@ -2,7 +2,7 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { Provider } from "react-redux";
 import { wrapper, store } from "../modules/app/redux/store";
-import Layout from '../components/Layout/Layout'
+import Layout from '../components/Layout/layout'
 
 function NeoviacoApp({ Component, pageProps }: AppProps) {
   return(
