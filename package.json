@@ -6,8 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "deploy": "install && next build && next export && next start"
+    "deploy": "gh-pages -b feature/github-pages -d build",
+    "lint": "next lint"
   },
   "dependencies": {
     "@netlify/plugin-nextjs": "^4.18.0",
