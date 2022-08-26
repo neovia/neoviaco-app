@@ -5,9 +5,10 @@ node_js:
 cache:
   directories:
   - node_modules # Cache the node_modules folder for quicker build times
-# env:
-#   global:
-#     -$GITHUB_TOKEN=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
+env:
+  global:
+    github_token: $GITHUB_TOKEN
+    # -$GITHUB_TOKEN=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
 script:
   # - yarn deploy
   - yarn install
@@ -17,7 +18,7 @@ script:
 deploy:
   provider: pages # Informs Travis this is a deployment to GitHub Pages
   skip_cleanup: true # Prevents Travis from resetting the working directory made during the build
-  github_token: GITHUB_TOKEN # GitHub access token to use when pushing to the gh-pages branch
+  github_token: $GITHUB_TOKEN # GitHub access token to use when pushing to the gh-pages branch
   # github_token: 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 # GitHub access token to use when pushing to the gh-pages branch
   local_dir: out # Directory to push to the gh-pages branch
   on:
