@@ -1,9 +1,13 @@
 language: node_js # Node.js based project
+
 node_js:
   - 12 # Level of Node.js to use
 cache:
   directories:
   - node_modules # Cache the node_modules folder for quicker build times
+env:
+  global:
+    -GITHUB_TOKEN=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
 script:
   # - yarn deploy
   - yarn install
