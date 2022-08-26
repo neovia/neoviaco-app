@@ -5,9 +5,9 @@ node_js:
 cache:
   directories:
   - node_modules # Cache the node_modules folder for quicker build times
-env:
-  global:
-    -$GITHUB_TOKEN=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
+# env:
+#   global:
+#     -$GITHUB_TOKEN=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
 script:
   # - yarn deploy
   - yarn install
