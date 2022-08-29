@@ -4,8 +4,7 @@ const nextConfig = {
   swcMinify: true,
   basePath: '/neovia',
   assetPrefix: './',
-
-
+  trailingSlash: true,
 }
 
 module.exports = nextConfig
