@@ -64,8 +64,8 @@ on:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: read|write
-  deployments: read|write
+  contents: write
+  deployments: write
   pages: write
   id-token: write
 
