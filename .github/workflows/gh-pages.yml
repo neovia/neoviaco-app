@@ -130,21 +130,27 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./out
-
-  # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
       - name: "Deploy Github Pages"
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages     # <- Branche sur laquelle seront commités les fichiers
           FOLDER: ./out  # <- Dossier contenant notre documentation générée
+
+  # Deployment job
+  # deploy:
+  #   environment:
+  #     name: github-pages
+  #     url: ${{ steps.deployment.outputs.page_url }}
+  #   runs-on: ubuntu-latest
+  #   needs: build
+  #   steps:
+  #     - name: "Deploy Github Pages"
+  #       uses: JamesIves/github-pages-deploy-action@3.7.1
+  #       with:
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #         BRANCH: gh-pages     # <- Branche sur laquelle seront commités les fichiers
+  #         FOLDER: ./out  # <- Dossier contenant notre documentation générée
       # - name: Deploy to GitHub Pages
       #   id: deployment
       #   uses: actions/deploy-pages@v1
