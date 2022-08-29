@@ -9,10 +9,10 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome123 to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
         <h2 className={styles.title}>
-          Initialisation de Neovia.co app
+          Initialisation de Neovia.co app test 2
         </h2>
 
         <p className={styles.description}>
