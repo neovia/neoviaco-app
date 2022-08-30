@@ -69,6 +69,7 @@ permissions:
   id-token: write
   pull-requests: write
   actions: write
+  deployments: write
 
 
 # Allow one concurrent deployment
