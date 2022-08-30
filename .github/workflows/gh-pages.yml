@@ -68,6 +68,7 @@ permissions:
   pages: write
   id-token: write
   pull-requests: write
+  actions: write
 
 
 # Allow one concurrent deployment
@@ -143,7 +144,7 @@ jobs:
       - name: "Deploy Github Pages"
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
-          # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages     # <- Branche sur laquelle seront commités les fichiers
           FOLDER: ./out  # <- Dossier contenant notre documentation générée
 
