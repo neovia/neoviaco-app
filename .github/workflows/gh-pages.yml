@@ -70,7 +70,7 @@ permissions:
   pull-requests: write
   actions: write
   deployments: write
-  repository-projects: wrtie
+  repository-projects: write
 
 
 
