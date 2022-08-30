@@ -1,7 +1,8 @@
-name: Deploy Neovia App
+name: Build & Deploy Neovia.co App
 on:
   push:
-    branches: ["feature/github-pages-actions"]
+    branches: ["develop"]
+    # branches: ["feature/github-pages-actions"]
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
