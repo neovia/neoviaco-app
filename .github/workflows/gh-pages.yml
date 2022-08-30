@@ -146,17 +146,17 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      # - name: "Deploy Github Pages"
-      #   uses: JamesIves/github-pages-deploy-action@3.7.1
-      #   with:
-      #     GITHUB_TOKEN: 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
-      #     BRANCH: gh-pages     # <- Branche sur laquelle seront commités les fichiers
-      #     FOLDER: ./out  # <- Dossier contenant notre documentation générée
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+      - name: "Deploy Github Pages"
+        uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages     # <- Branche sur laquelle seront commités les fichiers
+          FOLDER: ./out  # <- Dossier contenant notre documentation générée
+      # - name: Deploy to GitHub Pages
+      #   id: deployment
+      #   uses: actions/deploy-pages@v1
+      #   with:
+      #     BRANCH: gh-pages     # <- Branche sur laquelle seront commités les fichiers
 
         # with:
         #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
