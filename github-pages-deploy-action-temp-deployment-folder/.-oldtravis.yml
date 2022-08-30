@@ -1,0 +1,28 @@
+language: node_js # Node.js based project
+
+node_js:
+  - 12 # Level of Node.js to use
+cache:
+  directories:
+  - node_modules # Cache the node_modules folder for quicker build times
+env:
+  global:
+    github_token: $GITHUB_TOKEN
+    # -$GITHUB_TOKEN=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
+script:
+  # - yarn deploy
+  - yarn install
+  - yarn next build # Runs next build
+  - yarn next export # Runs next export and generates the out directory
+  - touch out/.nojekyll # Creates a file telling Github not to build the project using Jekyll
+deploy:
+  provider: pages # Informs Travis this is a deployment to GitHub Pages
+  skip_cleanup: true # Prevents Travis from resetting the working directory made during the build
+  github_token: $GITHUB_TOKEN # GitHub access token to use when pushing to the gh-pages branch
+  # github_token: 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 # GitHub access token to use when pushing to the gh-pages branch
+  local_dir: ./out # Directory to push to the gh-pages branch
+  on:
+    # Only deploy when the build is on master or main branch - two common default branch names
+    # If you're using a different branch name, add it here
+    all_branches: true
+    condition: $TRAVIS_BRANCH =~ ^(develop)$
