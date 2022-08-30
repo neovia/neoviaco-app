@@ -1,78 +1,13 @@
-# # Nom de notre workflow
-# name: "Build and deploy Github pages"
-
-# # Événements sur lesquels il doit être déclenché
-# on:
-#   push:         # <- Déclenché lorsque l'on pousse du code...
-#     branches:
-#       - develop  # <- ... mais seulement sur la branche "master"
-
-# jobs:
-
-#   # Notre job
-#   build-and-deploy:
-#     runs-on: ubuntu-latest
-
-#     # Tâches à effectuer, comme expliquées ci-dessus
-#     steps:
-
-#       # 1. On récupère le contenu du dépôt
-
-#       - name: "Checkout"
-#         uses: actions/checkout@v2
-#         with:
-#           persist-credentials: false
-#       - uses: actions/setup-node@v1
-#         with:
-#           node-version: 12
-#       - run: yarn install
-#       - run: yarn next build # Runs next build
-#       - run: yarn next export # Runs next export and generates the out directory
-#       - run: touch out/.nojekyll
-
-#       # - name: "Install Python dependencies"
-#       #   run: |
-#       #     pip3 install setuptools
-#       #     pip3 install sphinx sphinx-rtd-theme
-
-#       # - name: "Build Sphinx Doc"
-#       #   run: |
-#       #     make html
-
-#       # 3. Déploiement sur les Github Pages
-
-#       - name: "Deploy Github Pages"
-#         uses: JamesIves/github-pages-deploy-action@3.7.1
-#         with:
-#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#           BRANCH: gh-pages     # <- Branche sur laquelle seront commités les fichiers
-#           FOLDER: ./out  # <- Dossier contenant notre documentation générée
-
-# Sample workflow for building and deploying a Next.js site to GitHub Pages
-#
-# To get started with Next.js see: https://nextjs.org/docs/getting-started
-#
-name: Deploy Next.js site to Pages
-
+name: Deploy Neovia App
 on:
-  # Runs on pushes targeting the default branch
   push:
     branches: ["feature/github-pages-actions"]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: write
   pages: write
   id-token: write
-  # pull-requests: write
-  # actions: write
-  # deployments: write
-  # repository-projects: write
-
-
 
 # Allow one concurrent deployment
 concurrency:
@@ -111,10 +46,6 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v2
         with:
-          # Automatically inject basePath in your Next.js configuration file and disable
-          # server side image optimization (https://nextjs.org/docs/api-reference/next/image#unoptimized).
-          #
-          # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: next
       - name: Restore cache
         uses: actions/cache@v3
