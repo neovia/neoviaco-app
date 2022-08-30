@@ -142,7 +142,7 @@ jobs:
       - name: "Deploy Github Pages"
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
-          TOKEN: ${{ secrets.pat }}
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages     # <- Branche sur laquelle seront commités les fichiers
           FOLDER: ./out  # <- Dossier contenant notre documentation générée
 
