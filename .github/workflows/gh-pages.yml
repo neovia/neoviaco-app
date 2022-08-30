@@ -146,9 +146,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v1
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
       # - name: "Deploy Github Pages"
       #   uses: JamesIves/github-pages-deploy-action@3.7.1
       #   with:
