@@ -12,7 +12,7 @@ const Home: NextPage = () => {
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
         <h2 className={styles.title}>
-          Initialisation de Neovia.co app test 3 gitactions
+          Initialisation de Neovia.co app avec déploiement GitHub Actions
         </h2>
 
         <p className={styles.description}>
