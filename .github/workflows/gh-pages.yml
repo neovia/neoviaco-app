@@ -69,7 +69,7 @@ on:
 #   deployments: write
 #   pages: write
 #   id-token: write
-permissions: write-all
+permissions: read-all
 
 
 # Allow one concurrent deployment
