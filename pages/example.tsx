@@ -1,7 +1,5 @@
 import { NextPage } from "next";
 
-
-
 const Example:NextPage = () => {
 
     return (
