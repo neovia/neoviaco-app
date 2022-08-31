@@ -4,6 +4,9 @@ const nextConfig = {
   swcMinify: true,
   basePath: '/neovia',
   trailingSlash: true,
+  images: {
+    domains: ['m.media-amazon.com'],
+  },
 }
 
 module.exports = nextConfig
