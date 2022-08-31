@@ -1,4 +1,6 @@
-import '../styles/globals.css'
+// import '../styles/globals.css'
+import '../styles/assets/css/theme.bundle.css'
+import '../styles/assets/css/libs.bundle.css'
 import type { AppProps } from 'next/app'
 import { Provider } from "react-redux";
 import { wrapper, store } from "../modules/app/redux/store";
