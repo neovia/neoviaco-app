@@ -13,11 +13,11 @@ const Home: NextPage = () => {
           <div className="col-12 col-md-10 col-lg-7 text-center">
 
             <h1 className="display-2 fw-bold text-white">
-              Page d'accueil Neovia
+              Page d&aposaccueil Neovia
             </h1>
 
             <p className="lead mb-0 text-white-75">
-              Exemple d'implémentation Landkit
+              Exemple d&aposimplémentation Landkit
             </p>
 
           </div>
@@ -110,7 +110,7 @@ const Home: NextPage = () => {
 
             {/* <!-- Text --> */}
             <p className="mb-0 text-muted">
-              Here’s what we've been up to recently.
+              Here’s what we&aposve been up to recently.
             </p>
 
           </div>
@@ -138,7 +138,7 @@ const Home: NextPage = () => {
                 {/* <!-- Shape --> */}
                 <div className="position-relative">
                   <div className="shape shape-bottom shape-fluid-x svg-shim text-white">
-                    <svg viewBox="0 0 2880 480" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2160 0C1440 240 720 240 720 240H0v240h2880V0h-720z" fill="currentColor"/></svg>                  </div>
+                    <svg viewBox="0 0 2880 480" fill="none" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" clipRule="evenodd" d="M2160 0C1440 240 720 240 720 240H0v240h2880V0h-720z" fill="currentColor"/></svg>                  </div>
                 </div>
 
               </a>
@@ -198,7 +198,7 @@ const Home: NextPage = () => {
                 {/* <!-- Shape --> */}
                 <div className="position-relative">
                   <div className="shape shape-bottom shape-fluid-x svg-shim text-white">
-                    <svg viewBox="0 0 2880 480" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2160 0C1440 240 720 240 720 240H0v240h2880V0h-720z" fill="currentColor"/></svg>                  </div>
+                    <svg viewBox="0 0 2880 480" fill="none" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" clipRule="evenodd" d="M2160 0C1440 240 720 240 720 240H0v240h2880V0h-720z" fill="currentColor"/></svg>                  </div>
                 </div>
 
               </a>
@@ -258,7 +258,7 @@ const Home: NextPage = () => {
                 {/* <!-- Shape --> */}
                 <div className="position-relative">
                   <div className="shape shape-bottom shape-fluid-x svg-shim text-white">
-                    <svg viewBox="0 0 2880 480" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2160 0C1440 240 720 240 720 240H0v240h2880V0h-720z" fill="currentColor"/></svg>                  </div>
+                    <svg viewBox="0 0 2880 480" fill="none" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" clipRule="evenodd" d="M2160 0C1440 240 720 240 720 240H0v240h2880V0h-720z" fill="currentColor"/></svg>                  </div>
                 </div>
 
               </a>
@@ -318,7 +318,7 @@ const Home: NextPage = () => {
                 {/* <!-- Shape --> */}
                 <div className="position-relative">
                   <div className="shape shape-bottom shape-fluid-x svg-shim text-white">
-                    <svg viewBox="0 0 2880 480" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2160 0C1440 240 720 240 720 240H0v240h2880V0h-720z" fill="currentColor"/></svg>                  </div>
+                    <svg viewBox="0 0 2880 480" fill="none" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" clipRule="evenodd" d="M2160 0C1440 240 720 240 720 240H0v240h2880V0h-720z" fill="currentColor"/></svg>                  </div>
                 </div>
 
               </a>
