@@ -13,11 +13,11 @@ const Home: NextPage = () => {
           <div className="col-12 col-md-10 col-lg-7 text-center">
 
             <h1 className="display-2 fw-bold text-white">
-              Page d&aposaccueil Neovia
+              Page d'accueil Neovia
             </h1>
 
             <p className="lead mb-0 text-white-75">
-              Exemple d&aposimplémentation Landkit
+              Exemple d'implémentation Landkit
             </p>
 
           </div>
