@@ -5,6 +5,12 @@ import Image from 'next/image'
 
 const References:NextPage = () => {
 
+    const imageExample:string = "https://thumbs.dreamstime.com/b/illusion-d-optique-tunnel-abstrait-image-un-avec-des-rayures-noires-et-blanches-diagonales-168695979.jpg"
+
+    const NeoviaImageLoader = ({ src, width, quality }: {src: string, width: number, quality?: number}) => {
+        return src;
+    }
+
     return (
         <>
          {/* <!-- WELCOME --> */}
@@ -51,16 +57,15 @@ const References:NextPage = () => {
 
                     {/* <!-- Image --> */}
                     <div className="card-zoom">
-                        {/* <img className="card-img-top rounded shadow-light-lg" src="/assets/img/portfolio/portfolio-10.jpg" alt="..." /> */}
                         <Image
-                            // loader={"https://m.media-amazon.com/images/I/61jYxbb449L.jpg"}
-                            src="https://m.media-amazon.com/images/I/61jYxbb449L.jpg"
-                            // src="public/portfolio-10.jpg"
-                            alt="Panzer Surprise !"
+                            className="card-img-top rounded shadow-light-lg"
+                            loader={NeoviaImageLoader}
+                            src={imageExample}
+                            layout="responsive"
+                            alt="reference-example"
                             width={500}
                             height={500}
                         />
-
                     </div>
 
                     {/* <!-- Footer --> */}
@@ -84,7 +89,15 @@ const References:NextPage = () => {
 
                     {/* <!-- Image --> */}
                     <div className="card-zoom">
-                        {/* <img className="card-img-top rounded shadow-light-lg" src="assets/img/portfolio/portfolio-2.jpg" alt="..."> */}
+                        <Image
+                            className="card-img-top rounded shadow-light-lg"
+                            loader={NeoviaImageLoader}
+                            src={imageExample}
+                            layout="responsive"
+                            alt="reference-example"
+                            width={500}
+                            height={500}
+                        />
                     </div>
 
                     {/* <!-- Footer --> */}
@@ -108,7 +121,15 @@ const References:NextPage = () => {
 
                     {/* <!-- Image --> */}
                     <div className="card-zoom">
-                        {/* <img className="card-img-top rounded shadow-light-lg" src="assets/img/portfolio/portfolio-3.jpg" alt="..."> */}
+                        <Image
+                            className="card-img-top rounded shadow-light-lg"
+                            loader={NeoviaImageLoader}
+                            src={imageExample}
+                            layout="responsive"
+                            alt="reference-example"
+                            width={500}
+                            height={500}
+                        />
                     </div>
 
                     {/* <!-- Footer --> */}
@@ -132,7 +153,15 @@ const References:NextPage = () => {
 
                     {/* <!-- Image --> */}
                     <div className="card-zoom">
-                        {/* <img className="card-img-top rounded shadow-light-lg" src="assets/img/portfolio/portfolio-4.jpg" alt="..."> */}
+                        <Image
+                            className="card-img-top rounded shadow-light-lg"
+                            loader={NeoviaImageLoader}
+                            src={imageExample}
+                            layout="responsive"
+                            alt="reference-example"
+                            width={500}
+                            height={500}
+                        />
                     </div>
 
                     {/* <!-- Footer --> */}
@@ -156,7 +185,15 @@ const References:NextPage = () => {
 
                     {/* <!-- Image --> */}
                     <div className="card-zoom">
-                        {/* <img className="card-img-top rounded shadow-light-lg" src="assets/img/portfolio/portfolio-5.jpg" alt="..."> */}
+                        <Image
+                            className="card-img-top rounded shadow-light-lg"
+                            loader={NeoviaImageLoader}
+                            src={imageExample}
+                            layout="responsive"
+                            alt="reference-example"
+                            width={500}
+                            height={500}
+                        />
                     </div>
 
                     {/* <!-- Footer --> */}
@@ -180,7 +217,15 @@ const References:NextPage = () => {
 
                     {/* <!-- Image --> */}
                     <div className="card-zoom">
-                        {/* <img className="card-img-top rounded shadow-light-lg" src="assets/img/portfolio/portfolio-6.jpg" alt="..."> */}
+                        <Image
+                            className="card-img-top rounded shadow-light-lg"
+                            loader={NeoviaImageLoader}
+                            src={imageExample}
+                            layout="responsive"
+                            alt="reference-example"
+                            width={500}
+                            height={500}
+                        />
                     </div>
 
                     {/* <!-- Footer --> */}
@@ -204,7 +249,15 @@ const References:NextPage = () => {
 
                     {/* <!-- Image --> */}
                     <div className="card-zoom">
-                        {/* <img className="card-img-top rounded shadow-light-lg" src="assets/img/portfolio/portfolio-7.jpg" alt="..."> */}
+                        <Image
+                            className="card-img-top rounded shadow-light-lg"
+                            loader={NeoviaImageLoader}
+                            src={imageExample}
+                            layout="responsive"
+                            alt="reference-example"
+                            width={500}
+                            height={500}
+                        />
                     </div>
 
                     {/* <!-- Footer --> */}
@@ -228,7 +281,15 @@ const References:NextPage = () => {
 
                     {/* <!-- Image --> */}
                     <div className="card-zoom">
-                        {/* <img className="card-img-top rounded shadow-light-lg" src="assets/img/portfolio/portfolio-8.jpg" alt="..."> */}
+                        <Image
+                            className="card-img-top rounded shadow-light-lg"
+                            loader={NeoviaImageLoader}
+                            src={imageExample}
+                            layout="responsive"
+                            alt="reference-example"
+                            width={500}
+                            height={500}
+                        />
                     </div>
 
                     {/* <!-- Footer --> */}
@@ -252,7 +313,15 @@ const References:NextPage = () => {
 
                     {/* <!-- Image --> */}
                     <div className="card-zoom">
-                        {/* <img className="card-img-top rounded shadow-light-lg" src="assets/img/portfolio/portfolio-9.jpg" alt="..."> */}
+                        <Image
+                            className="card-img-top rounded shadow-light-lg"
+                            loader={NeoviaImageLoader}
+                            src={imageExample}
+                            layout="responsive"
+                            alt="reference-example"
+                            width={500}
+                            height={500}
+                        />
                     </div>
 
                     {/* <!-- Footer --> */}

@@ -5,7 +5,7 @@ const nextConfig = {
   basePath: '/neovia',
   trailingSlash: true,
   images: {
-    domains: ['m.media-amazon.com'],
+    domains: ['m.media-amazon.com', 'thumbs.dreamstime.com'],
   },
 }
 
