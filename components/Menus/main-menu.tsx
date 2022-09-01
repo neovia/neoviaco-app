@@ -196,7 +196,6 @@ const MainMenu = () => {
                                 <a className="dropdown-item mb-5 mb-lg-0" href="./blog-search.html">
                                 Search
                                 </a>
-
                             </div>
                             <div className="col-12 col-lg-6">
 
