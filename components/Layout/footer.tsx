@@ -52,17 +52,17 @@ const Footer = () => {
                             {/* <!-- Social --> */}
                             <ul className="list-unstyled list-inline list-social mb-6 mb-md-0">
                                 <li className="list-inline-item list-social-item me-3">
-                                    <a href="http://instagram.com/icemortgagetech" target="_blank" className="text-decoration-none">
+                                    <a href="http://instagram.com/icemortgagetech" target="_blank" rel="noreferrer" className="text-decoration-none">
                                         <img src="./assets/img/icons/social/instagram.svg" className="list-social-icon" alt="..." />
                                     </a>
                                 </li>
                                 <li className="list-inline-item list-social-item me-3">
-                                    <a href="https://www.facebook.com/ICEMortgageTech" target="_blank" className="text-decoration-none">
+                                    <a href="https://www.facebook.com/ICEMortgageTech" target="_blank" rel="noreferrer" className="text-decoration-none">
                                         <img src="./assets/img/icons/social/facebook.svg" className="list-social-icon" alt="..." />
                                     </a>
                                 </li>
                                 <li className="list-inline-item list-social-item me-3">
-                                    <a href="https://twitter.com/ICEMortgageTech" target="_blank" className="text-decoration-none">
+                                    <a href="https://twitter.com/ICEMortgageTech" target="_blank" rel="noreferrer" className="text-decoration-none">
                                         <img src="./assets/img/icons/social/twitter.svg" className="list-social-icon" alt="..." />
                                     </a>
                                 </li>

@@ -25,7 +25,7 @@ const Header = () => {
                         <MainMenu />
                         {/* <!-- Button --> */}
                         {/* <!--  */}
-                        <a className="navbar-btn btn btn-sm btn-primary lift ms-auto" href="https://themes.getbootstrap.com/product/landkit/" target="_blank">
+                        <a className="navbar-btn btn btn-sm btn-primary lift ms-auto" href="https://themes.getbootstrap.com/product/landkit/" target="_blank" rel="noreferrer">
                             Buy now
                         </a>
                         {/* --> */}
