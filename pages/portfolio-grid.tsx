@@ -3,14 +3,33 @@ import { useState } from "react";
 import Image from 'next/image'
 import IllustratedCardGrid from "../components/Paragraphs/Portfolio/Grid/illustratedCardGrid";
 
-const PortfolioGrid:NextPage = () => {
+interface PortfolioGridTypes {
+    posts:{
+        items:object,
+        kind:string,
+        totalItems:number
+    }
+}
 
-    let [itemsCounterState, setStateItemsCounter] = useState([0,1,2,3,4,5]);
+// type itemGrid = {
+//     accessInfo:object,
+//     etag:string,
+//     id:string,
+//     kind:string,
+//     saleInfo:object,
+//     searchInfo:object,
+//     selfLink:string,
+// }
+
+const PortfolioGrid:NextPage<any> = ({posts}) => {
 
     const getImageCards = () => {
         let CardsTabs:JSX.Element[] = [];
-        itemsCounterState.forEach((items, index) => {
-            CardsTabs.push(<IllustratedCardGrid key={index} />)
+        posts.items.forEach((item:any, index:number) => {
+            const tiltle:string = item.volumeInfo.title.length > 0 ? item.volumeInfo.title :'';
+            const image:string = Object.keys(item.volumeInfo).includes('imageLinks') === true ? item.volumeInfo.imageLinks.thumbnail : '';
+            console.log('item', item)
+            CardsTabs.push(<IllustratedCardGrid key={index} title={tiltle} image={image}/>)
         });
         return CardsTabs;
     }
@@ -64,7 +83,17 @@ const PortfolioGrid:NextPage = () => {
             </section>
         </>
     )
-
 }
+
+export async function getStaticProps() {
+    const res = await fetch('https://www.googleapis.com/books/v1/volumes?q=quilting')
+    const posts = await res.json();
+
+    return {
+      props: {
+        posts,
+      },
+    }
+  }
 
 export default PortfolioGrid;

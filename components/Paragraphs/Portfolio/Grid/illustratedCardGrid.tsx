@@ -1,6 +1,11 @@
 import Image from "next/image";
 
-const IllustratedCardGrid = () => {
+interface IllustratedCardGrid {
+    title:string,
+    image:string
+}
+
+const IllustratedCardGrid = ({title, image}:IllustratedCardGrid) => {
 
     const imageExample:string = "https://thumbs.dreamstime.com/b/illusion-d-optique-tunnel-abstrait-image-un-avec-des-rayures-noires-et-blanches-diagonales-168695979.jpg"
     const NeoviaImageLoader = ({ src, width, quality }: {src: string, width: number, quality?: number}) => {
@@ -15,7 +20,7 @@ const IllustratedCardGrid = () => {
                         <Image
                             className="card-img-top rounded shadow-light-lg"
                             loader={NeoviaImageLoader}
-                            src={imageExample}
+                            src={image}
                             layout="responsive"
                             alt="reference-example"
                             width={500}
@@ -24,7 +29,7 @@ const IllustratedCardGrid = () => {
                     </div>
                     <div className="card-footer">
                         <h6 className="text-uppercase mb-1 text-muted">Branding</h6>
-                        <h4 className="mb-0">Curology Campaign</h4>
+                        <h4 className="mb-0">{title}</h4>
                     </div>
                 </a>
             </div>

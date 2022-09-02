@@ -17,7 +17,7 @@
     "incremental": true,
     "noEmitOnError": true,
     "noImplicitThis": true,
-    "noImplicitAny": true,
+    // "noImplicitAny": true,
     "strictNullChecks": true,
     "noFallthroughCasesInSwitch": true,
     "allowSyntheticDefaultImports": true
