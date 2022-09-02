@@ -1,10 +1,21 @@
 import { NextPage } from "next";
-import Image from 'next/image'
-import IllustratedCardSidebar from "../components/Portfolio/Sidebar/illustratedCardSidebar";
+import { useState } from "react";
+import IllustratedCardSidebar from "../components/Paragraphs/Portfolio/Sidebar/illustratedCardSidebar";
 
 
 
 const PortfolioSidebar:NextPage = () => {
+
+    let [itemsCounterState, setStateItemsCounter] = useState([0,1]);
+
+    const getImageCards = () => {
+        let CardsTabs:JSX.Element[] = [];
+        itemsCounterState.forEach((items, index) => {
+            CardsTabs.push(<IllustratedCardSidebar key={index} />)
+        });
+        return CardsTabs;
+    }
+
 
     return (
         <>
@@ -19,7 +30,7 @@ const PortfolioSidebar:NextPage = () => {
                             </div>
                             {/* <!-- Text --> */}
                             <p className="fs-lg mb-7 text-muted">
-                            We created a photographic brand for Larq that’s fun and exciting.
+                                We created a photographic brand for Larq that’s fun and exciting.
                             </p>
                             {/* <!-- List group --> */}
                             <ul className="list-group list-group-flush">
@@ -47,13 +58,13 @@ const PortfolioSidebar:NextPage = () => {
                     <div className="col-12 col-md-7">
                         {/* <!-- Images --> */}
                         <section className="pb-8 pt-md-12 pb-md-10">
-                            <IllustratedCardSidebar />
-                            <IllustratedCardSidebar />
-                            <IllustratedCardSidebar />
-                            <IllustratedCardSidebar />
-                            <IllustratedCardSidebar />
-                            <IllustratedCardSidebar />
-                            <IllustratedCardSidebar />
+                            {itemsCounterState.length > 0 ?
+                                <>
+                                    { getImageCards() }
+                                </>
+                            :
+                                <></>
+                            }
                         </section>
                     </div>
                 </div>
