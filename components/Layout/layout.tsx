@@ -25,12 +25,16 @@ const Layout = ({children}: LayoutProps) => {
 
 
             <Header />
-
             {/* children = PAGES & COMPONENTS */}
             { children }
             <Script
                 type="text/javascript"
                 src="../theme.bundle.js"
+                strategy="lazyOnload"
+            />
+            <Script
+                type="text/javascript"
+                src="../vendor.bundle.js"
                 strategy="lazyOnload"
             />
             <Footer />

@@ -124,31 +124,6 @@ const PortfolioCaseStudy:NextPage<any> = ({posts}) => {
 
             {/* <!-- SECTION --> */}
             <Slider imageUrl={ExempleImage} />
-            {/* <section className="pt-6 pt-md-8">
-            <div className="container">
-                <div className="row justify-content-center">
-                <div className="col-12 col-lg-11 col-xl-10">
-                    <figure className="figure mb-0">
-                    <div className="figure-img" data-flickity='{"wrapAround": true, "pageDots": false, "imagesLoaded": true, "adaptiveHeight": true}'>
-                        <div className="w-100">
-                        <img src="assets/img/portfolio/portfolio-cover-3.jpg" alt="..." className="img-fluid rounded" />
-                        </div>
-                        <div className="w-100">
-                        <img src="assets/img/portfolio/portfolio-cover-4.jpg" alt="..." className="img-fluid rounded" />
-                        </div>
-                        <div className="w-100">
-                        <img src="assets/img/portfolio/portfolio-cover-5.jpg" alt="..." className="img-fluid rounded" />
-                        </div>
-                    </div>
-
-                    <figcaption className="figure-caption text-center">
-                        This is a caption on this photo for reference
-                    </figcaption>
-                    </figure>
-                </div>
-                </div>
-            </div>
-            </section> */}
 
             {/* <!-- SECTION --> */}
             <section className="pt-6 pt-md-8">

@@ -1,4 +1,4 @@
-import Image from "next/future/image";
+import Image from "next/image";
 
 type ImageType = {
     imageUrl:string
@@ -15,27 +15,16 @@ const SliderItem = ({imageUrl}:ImageType) => {
         <>
             <div className="w-100">
                 <Image
-                        className="img-fluid rounded"
-                        loader={NeoviaImageLoader}
-                        src={imageExample}
-                        // layout="raw"
-                        alt="reference-example"
-                        width={500}
-                        height={500}
-                    />
-                    {/* <img src={imageExample} className="img-fluid rounded" alt="reference-example"/> */}
+                    className="img-fluid rounded"
+                    loader={NeoviaImageLoader}
+                    src={imageExample}
+                    alt="reference-example"
+                    width="500"
+                    height="500"
+                    // layout="fill"
+                    objectFit="contain"
+                />
             </div>
-            {/* <a className="d-block mb-4" data-bigpicture='{"imgSrc": "assets/img/portfolio/portfolio-6.jpg"}' href="#">
-                <Image
-                        className="img-fluid rounded lift lift-lg"
-                        loader={NeoviaImageLoader}
-                        src={imageExample}
-                        layout="responsive"
-                        alt="reference-example"
-                        width={500}
-                        height={500}
-                    />
-            </a> */}
         </>
     )
 }
