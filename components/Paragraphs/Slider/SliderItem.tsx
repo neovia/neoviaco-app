@@ -18,7 +18,7 @@ const SliderItem = ({imageUrl}:ImageType) => {
                         className="img-fluid rounded"
                         loader={NeoviaImageLoader}
                         src={imageExample}
-                        layout="raw"
+                        // layout="raw"
                         alt="reference-example"
                         width={500}
                         height={500}
