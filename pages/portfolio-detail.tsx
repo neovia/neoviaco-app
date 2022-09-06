@@ -4,15 +4,18 @@ import IllustratedCardSidebar from "../components/Paragraphs/Portfolio/Sidebar/i
 
 
 
-const PortfolioSidebar:NextPage = () => {
+const PortfolioSidebar:NextPage<any> = ({posts}) => {
 
+    const project = Object.keys(posts).includes('items') == true && posts.items.length > 0 ? posts.items[1].volumeInfo : [];
     let [itemsCounterState, setStateItemsCounter] = useState([0,1]);
 
     const getImageCards = () => {
         let CardsTabs:JSX.Element[] = [];
-        itemsCounterState.forEach((items, index) => {
-            CardsTabs.push(<IllustratedCardSidebar key={index} />)
-        });
+        if(Object.keys(project).length > 0 && Object.keys(project).includes('imageLinks') == true  ) {
+            itemsCounterState.forEach((items:any, index:number) => {
+                CardsTabs.push(<IllustratedCardSidebar key={index} imageUrl={project.imageLinks.thumbnail} />)
+            });
+        }
         return CardsTabs;
     }
 
@@ -26,24 +29,24 @@ const PortfolioSidebar:NextPage = () => {
                         <aside className="py-8 py-md-10">
                             {/* <!-- Brand --> */}
                             <div className="img-fluid mb-4 text-body svg-shim" style={{maxWidth: "140px"}}>
-                            { "NOM OU LOGO DU PROJET" }
+                            { project.title }
                             </div>
                             {/* <!-- Text --> */}
                             <p className="fs-lg mb-7 text-muted">
-                                We created a photographic brand for Larq that’s fun and exciting.
+                                { project.subtitle }
                             </p>
                             {/* <!-- List group --> */}
                             <ul className="list-group list-group-flush">
                                 <li className="list-group-item">
                                     {/* <!-- Heading --> */}
                                     <h6 className="d-flex mb-0 text-uppercase">
-                                        Year <span className="ms-auto">2019</span>
+                                        Date <span className="ms-auto">{ project.publishedDate }</span>
                                     </h6>
                                 </li>
                                 <li className="list-group-item">
                                     {/* <!-- Heading --> */}
                                     <h6 className="d-flex mb-0 text-uppercase">
-                                        Service <span className="ms-auto">Photography</span>
+                                        Service <span className="ms-auto">{project.printType}</span>
                                     </h6>
                                 </li>
                                 <li className="list-group-item">
@@ -73,5 +76,16 @@ const PortfolioSidebar:NextPage = () => {
     )
 
 }
+
+export async function getStaticProps() {
+    const res = await fetch('https://www.googleapis.com/books/v1/volumes?q=quilting')
+    const posts = await res.json();
+
+    return {
+      props: {
+        posts,
+      },
+    }
+  }
 
 export default PortfolioSidebar;

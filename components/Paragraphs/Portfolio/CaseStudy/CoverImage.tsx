@@ -4,7 +4,7 @@ type ImageType = {
     imageUrl:string
 }
 
-const IllustratedCardSidebar = ({imageUrl}:ImageType) => {
+const CoverImage = ({imageUrl}:ImageType) => {
 
     const imageExample:string = imageUrl.length > 0 ? imageUrl: "https://thumbs.dreamstime.com/b/illusion-d-optique-tunnel-abstrait-image-un-avec-des-rayures-noires-et-blanches-diagonales-168695979.jpg"
     const NeoviaImageLoader = ({ src, width, quality }: {src: string, width: number, quality?: number}) => {
@@ -13,7 +13,9 @@ const IllustratedCardSidebar = ({imageUrl}:ImageType) => {
 
     return (
         <>
-            <a className="d-block mt-7" data-bigpicture='{"imgSrc": "assets/img/portfolio/portfolio-22.jpg"}' href="#">
+            <section data-jarallax data-speed=".8" className="d-block mt-7"
+            // style={{backgroundImage: "url(assets/img/portfolio/portfolio-cover-8.jpg);"}}
+            >
                 <Image
                     className="img-fluid rounded"
                     loader={NeoviaImageLoader}
@@ -23,9 +25,9 @@ const IllustratedCardSidebar = ({imageUrl}:ImageType) => {
                     width={500}
                     height={500}
                 />
-            </a>
+            </section>
         </>
     )
 }
 
-export default IllustratedCardSidebar;
+export default CoverImage;

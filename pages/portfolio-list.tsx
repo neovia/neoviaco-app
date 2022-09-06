@@ -23,12 +23,13 @@ interface PortfolioGridTypes {
 
 const PortfolioGrid:NextPage<any> = ({posts}) => {
 
+    let [itemsCounterState, setStateItemsCounter] = useState([0,1,2,3,4,5]);
+
     const getImageCards = () => {
         let CardsTabs:JSX.Element[] = [];
         posts.items.forEach((item:any, index:number) => {
             const tiltle:string = item.volumeInfo.title.length > 0 ? item.volumeInfo.title :'';
             const image:string = Object.keys(item.volumeInfo).includes('imageLinks') === true ? item.volumeInfo.imageLinks.thumbnail : '';
-            console.log('item', item)
             CardsTabs.push(<IllustratedCardGrid key={index} title={tiltle} image={image}/>)
         });
         return CardsTabs;

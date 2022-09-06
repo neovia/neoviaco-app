@@ -7,6 +7,11 @@ const nextConfig = {
   images: {
     domains: ['m.media-amazon.com', 'thumbs.dreamstime.com'],
   },
+  experimental: {
+        images: {
+          allowFutureImage: true
+        }
+    },
 }
 
 module.exports = nextConfig
