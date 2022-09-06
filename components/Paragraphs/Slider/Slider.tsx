@@ -8,9 +8,6 @@ type ImageType = {
 const Slider = ({imageUrl}:ImageType) => {
 
     const imageExample:string = imageUrl.length > 0 ? imageUrl: "https://thumbs.dreamstime.com/b/illusion-d-optique-tunnel-abstrait-image-un-avec-des-rayures-noires-et-blanches-diagonales-168695979.jpg"
-    const NeoviaImageLoader = ({ src, width, quality }: {src: string, width: number, quality?: number}) => {
-        return src;
-    }
 
     return (
         <>
@@ -25,18 +22,7 @@ const Slider = ({imageUrl}:ImageType) => {
                         <SliderItem imageUrl={imageExample} />
                         <SliderItem imageUrl={imageExample} />
                         <SliderItem imageUrl={imageExample} />
-
-                        {/* <div className="w-100"> */}
-                        {/* <img src="assets/img/portfolio/portfolio-cover-3.jpg" alt="..." className="img-fluid rounded" /> */}
-                        {/* </div> */}
-                        {/* <div className="w-100"> */}
-                        {/* <img src="assets/img/portfolio/portfolio-cover-4.jpg" alt="..." className="img-fluid rounded" /> */}
-                        {/* </div> */}
-                        {/* <div className="w-100"> */}
-                        {/* <img src="assets/img/portfolio/portfolio-cover-5.jpg" alt="..." className="img-fluid rounded" /> */}
-                        {/* </div> */}
                     </div>
-
                     <figcaption className="figure-caption text-center">
                         This is a caption on this photo for reference
                     </figcaption>
