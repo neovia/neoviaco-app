@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 import { useState } from "react";
-import IllustratedCardSidebar from "../components/Paragraphs/Portfolio/Sidebar/illustratedCardSidebar";
+import IllustratedCardSidebar from "../components/Paragraphs/Portfolio/Sidebar/illustrated-card--sidebar";
 
 
 

@@ -1,7 +1,7 @@
 import { NextPage } from "next";
 import { useState } from "react";
 import Image from 'next/image'
-import IllustratedCardGrid from "../components/Paragraphs/Portfolio/Grid/illustratedCardGrid";
+import IllustratedCardGrid from "../components/Paragraphs/Portfolio/Grid/illustrated-card--grid";
 
 interface PortfolioGridTypes {
     posts:{
