@@ -1,7 +1,7 @@
 name: Preprod - Deploy Neovia.co App
 on:
   push:
-    branches: ["master"]
+    branches: ["feature/github-pages-environments"]
     # branches: ["feature/github-pages-actions"]
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
