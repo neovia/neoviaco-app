@@ -1,5 +1,5 @@
 import Image from "next/image";
-import SliderItem from "./SliderItem";
+import SliderItem from "./slider-item";
 
 type ImageType = {
     imageUrl:string

@@ -4,7 +4,7 @@ type ImageType = {
     imageUrl:string
 }
 
-const CoverImage = ({imageUrl}:ImageType) => {
+const ImageCover = ({imageUrl}:ImageType) => {
 
     const imageExample:string = imageUrl.length > 0 ? imageUrl: "https://thumbs.dreamstime.com/b/illusion-d-optique-tunnel-abstrait-image-un-avec-des-rayures-noires-et-blanches-diagonales-168695979.jpg"
     const NeoviaImageLoader = ({ src, width, quality }: {src: string, width: number, quality?: number}) => {
@@ -30,4 +30,4 @@ const CoverImage = ({imageUrl}:ImageType) => {
     )
 }
 
-export default CoverImage;
+export default ImageCover;
