@@ -74,7 +74,7 @@ jobs:
         pages: write      # to deploy to Pages
         id-token: write   # to verify the deployment originates from an appropriate source
       environment:
-        name: github-pages
+        name: preprod
         url: preprod.${{ steps.deployment.outputs.page_url }}
       runs-on: ubuntu-latest
       steps:
