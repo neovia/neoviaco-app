@@ -1,8 +1,11 @@
 import { NextPage } from "next";
 import { useState } from "react";
-import CoverImage from "../components/Paragraphs/Portfolio/CaseStudy/CoverImage";
-import IllustratedCardSidebar from "../components/Paragraphs/Portfolio/Sidebar/illustratedCardSidebar";
-import Slider from "../components/Paragraphs/Slider/Slider";
+import ImageCover from "../components/Paragraphs/Portfolio/CaseStudy/Images/image--cover";
+import IllustratedCardSidebar from "../components/Paragraphs/Portfolio/Sidebar/illustrated-card--sidebar";
+import Slider from "../components/Paragraphs/Portfolio/CaseStudy/Slider/slider";
+import Quotes from "../components/Paragraphs/Portfolio/CaseStudy/Quotes/quotes";
+import Text from "../components/Paragraphs/Portfolio/CaseStudy/Text/text";
+import BulletPoints from "../components/Paragraphs/Portfolio/CaseStudy/BulletPoints/bullet-points";
 
 
 
@@ -29,7 +32,7 @@ const PortfolioCaseStudy:NextPage<any> = ({posts}) => {
 
     return (
         <>
-            <CoverImage imageUrl="https://thumbs.dreamstime.com/b/illusion-d-optique-tunnel-abstrait-image-un-avec-des-rayures-noires-et-blanches-diagonales-168695979.jpg"/>
+            <ImageCover imageUrl="https://thumbs.dreamstime.com/b/illusion-d-optique-tunnel-abstrait-image-un-avec-des-rayures-noires-et-blanches-diagonales-168695979.jpg"/>
             {/* <!-- HEADER --> */}
             <section className="pt-8 pt-md-11">
             <div className="container">
@@ -100,27 +103,7 @@ const PortfolioCaseStudy:NextPage<any> = ({posts}) => {
             </section>
 
             {/* <!-- SECTION --> */}
-            <section className="pt-6 pt-md-8">
-            <div className="container">
-                <div className="row justify-content-center">
-                <div className="col-12 col-md-10 col-lg-9 col-xl-8">
-                    {/* <!-- Text --> */}
-                    <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi reiciendis odio
-                    perferendis libero saepe voluptatum fugiat dolore voluptates aut, ut quas doloremque
-                    quo ad quis ipsum molestias neque pariatur commodi.
-                    </p>
-                    <p className="mb-0">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, quidem, earum!
-                    Quo fugiat voluptates similique quidem dolorem ex non quibusdam odio suscipit error,
-                    maiores, itaque blanditiis vel, sed, cum velit?
-                    </p>
-                </div>
-                </div>
-                {/* <!-- / .row --> */}
-            </div>
-            {/* <!-- / .container --> */}
-            </section>
+            <Text />
 
             {/* <!-- SECTION --> */}
             <Slider imageUrl={ExempleImage} />
@@ -142,19 +125,7 @@ const PortfolioCaseStudy:NextPage<any> = ({posts}) => {
                     quo ad quis ipsum molestias neque pariatur commodi.
                     </p>
 
-                    {/* <!-- Divider --> */}
-                    <hr className="hr-md mb-7 mx-auto" />
-
-                    {/* <!-- Blockquote --> */}
-                    <blockquote className="blockquote mb-7">
-                    <p className="h2 mb-0 text-center text-primary-desat">
-                        “So many teams struggle to make their onboarding experience anywhere near as good as
-                        their core product, so the results of this is poor retention”
-                    </p>
-                    </blockquote>
-
-                    {/* <!-- Divider --> */}
-                    <hr className="hr-md mb-7 mx-auto" />
+                    <Quotes text={"Exemple de texte"}/>
 
                     {/* <!-- Text --> */}
                     <p className="mb-0">
@@ -171,99 +142,30 @@ const PortfolioCaseStudy:NextPage<any> = ({posts}) => {
 
             {/* <!-- SECTION --> */}
             <section className="pt-6 pt-md-8">
-
-                        <Slider imageUrl={ExempleImage}/>
-                    {/* <div className="col-6">
-
+                    <div className="col-6">
                         <a className="d-block mb-4" data-bigpicture='{"imgSrc": "assets/img/portfolio/portfolio-6.jpg"}' href="#">
-                        <img src="assets/img/portfolio/portfolio-6.jpg" alt="..." className="img-fluid rounded lift lift-lg" />
+                            <img src="assets/img/portfolio/portfolio-6.jpg" alt="..." className="img-fluid rounded lift lift-lg" />
                         </a>
-
                         <a className="d-block lift" data-bigpicture='{"imgSrc": "assets/img/portfolio/portfolio-12.jpg"}' href="#">
-                        <img src="assets/img/portfolio/portfolio-12.jpg" alt="..." className="img-fluid rounded lift lift-lg" />
+                            <img src="assets/img/portfolio/portfolio-12.jpg" alt="..." className="img-fluid rounded lift lift-lg" />
                         </a>
-
-                    </div> */}
-                    {/* <div className="col-6">
-
+                    </div>
+                     <div className="col-6">
                         <a className="d-block mb-4" data-bigpicture='{"imgSrc": "assets/img/portfolio/portfolio-15.jpg"}' href="#">
-                        <img src="assets/img/portfolio/portfolio-15.jpg" alt="..." className="img-fluid rounded lift lift-lg" />
+                            <img src="assets/img/portfolio/portfolio-15.jpg" alt="..." className="img-fluid rounded lift lift-lg" />
                         </a>
-
                         <a className="d-block" data-bigpicture='{"imgSrc": "assets/img/portfolio/portfolio-7.jpg"}' href="#">
-                        <img src="assets/img/portfolio/portfolio-7.jpg" alt="..." className="img-fluid rounded lift lift-lg" />
+                            <img src="assets/img/portfolio/portfolio-7.jpg" alt="..." className="img-fluid rounded lift lift-lg" />
                         </a>
-
-                    </div> */}
+                    </div>
                     {/* <!-- / .row --> */}
-
             </section>
 
             {/* <!-- SECTION --> */}
-            <section className="py-6 py-md-8">
-            <div className="container">
-                <div className="row justify-content-center">
-                <div className="col-12 col-md-10 col-lg-9 col-xl-8">
-                    {/* <!-- Heading --> */}
-                    <h3 className="fw-bold">
-                    Small heading for a smaller transition
-                    </h3>
-
-                    {/* <!-- Text --> */}
-                    <p className="mb-7">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ducimus provident,
-                    quos sint hic, quidem voluptatibus. Quasi, distinctio cupiditate, omnis vitae maxime
-                    nisi eum similique libero ad dolore sint tempora.
-                    </p>
-
-                    {/* <!-- List --> */}
-                    <ul className="list-unstyled mb-0">
-                    <li className="d-flex">
-                        {/* <!-- Check --> */}
-                        <div className="badge badge-rounded-circle bg-success-soft mt-1 me-4">
-                        <i className="fe fe-check"></i>
-                        </div>
-
-                        {/* <!-- Text --> */}
-                        <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis quo labore,
-                        deleniti optio non, voluptate illo doloribus odio iure molestiae eos tempora
-                        nobis.
-                        </p>
-                    </li>
-                    <li className="d-flex">
-                        {/* <!-- Check --> */}
-                        <div className="badge badge-rounded-circle bg-success-soft mt-1 me-4">
-                        <i className="fe fe-check"></i>
-                        </div>
-
-                        {/* <!-- Text --> */}
-                        <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis quo labore,
-                        deleniti optio non, voluptate illo doloribus odio iure molestiae eos tempora
-                        nobis.
-                        </p>
-                    </li>
-                    <li className="d-flex">
-                        {/* <!-- Check --> */}
-                        <div className="badge badge-rounded-circle bg-success-soft mt-1 me-4">
-                        <i className="fe fe-check"></i>
-                        </div>
-
-                        {/* <!-- Text --> */}
-                        <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis quo labore,
-                        deleniti optio non, voluptate illo doloribus odio iure molestiae eos tempora
-                        nobis.
-                        </p>
-                    </li>
-                    </ul>
-                </div>
-                </div>
-                {/* <!-- / .row --> */}
-            </div>
-            {/* <!-- / .container --> */}
-            </section>
+            <BulletPoints
+                title={'Small heading for a smaller transition'}
+                text={"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ducimus provident,quos sint hic, quidem voluptatibus. Quasi, distinctio cupiditate, omnis vitae maximenisi eum similique libero ad dolore sint tempora."}
+            />
 
             {/* <!-- SHAPE --> */}
             <div className="position-relative">
