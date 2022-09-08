@@ -15,6 +15,8 @@ dependencies:
     nodejs:
         yarn: "1.22.5"
 
+
+
 # The hooks that will be triggered when the package is deployed.
 hooks:
     # Build hooks can modify the application files on disk but not access any services like databases.
@@ -28,13 +30,15 @@ disk: 5120
 
 # The configuration of the application when it is exposed to the web.
 web:
-    locations:
-        '/':
-            # The public directory of the application relative to its root.
-            root: 'out'
-            index: ['index.html']
-            scripts: false
-            allow: true
+    commands:
+        start: yarn next start -p $PORT
+
+# The mounts that will be performed when the package is deployed.
+mounts:
+    # Next.js will try to cache files, so it must be writeable.
+    '/.next':
+        source: local
+        source_path: 'next'
 
 source:
   operations:
