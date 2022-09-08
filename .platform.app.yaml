@@ -34,12 +34,19 @@ web:
         start: yarn next start -p $PORT
 
 # The mounts that will be performed when the package is deployed.
-mounts:
-    # Next.js will try to cache files, so it must be writeable.
-    '/.next':
-        source: local
-        source_path: 'next'
-
+# mounts:
+#     # Next.js will try to cache files, so it must be writeable.
+#     '/.next':
+#         source: local
+#         source_path: 'next'
+# web:
+    locations:
+        '/':
+            # The public directory of the application relative to its root.
+            root: 'out'
+            index: ['index.html']
+            scripts: false
+            allow: true
 source:
   operations:
     auto-update:
