@@ -1,7 +1,3 @@
 "https://{default}/":
   type: upstream
   upstream: "neoviacoapp:http"
-
-"https://{default}/":
-    type: redirect
-    to: "https://www.{default}/"
